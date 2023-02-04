@@ -80,14 +80,16 @@
 {#if !finalResult}
     <Modal isOpenModal={!$gameParams.ready} on:closeModal={startGame}>
         <div class="modal">
-            <h3>hexideci</h3>
-            <p>Instructions:</p>
-            <p>You are given two <strong>hexidecimal</strong> numbers</p><br/>
-            <p>Your job is to add them up in hexidecimal <strong>(0x)</strong> and decimal <strong>(0d)</strong> formats</p><br/>
-            <p>Press the <button class="demo-key">ENTER</button> key to submit your answer and recieve the next prompt</p><br />
-            <p>Empty boxes are <strong>removed</strong> prior to scoring</p><br/>
-            <p>Play until you get both hexi and deci wrong to recieve final score</p><br/>
-            <p>Rise through the ranks of <strong>{ranks.join(" ")}</strong> and challenge your friends!</p>
+            <div class="instructions">
+                <h3>HexiDeci</h3>
+                <p>Instructions:</p>
+                <p>You are given two <strong>hexidecimal</strong> numbers</p><br/>
+                <p>Your job is to add them up in hexidecimal <strong>(0x)</strong> and decimal <strong>(0d)</strong> formats</p><br/>
+                <p>Press the <button class="demo-key">ENTER</button> key to submit your answer and recieve the next prompt</p><br />
+                <p>Empty boxes are <strong>removed</strong> prior to scoring</p><br/>
+                <p>Play until you get both hexi and deci wrong to recieve final score</p><br/>
+                <p>Rise through the ranks of <strong>{ranks.join(" ")}</strong> and challenge your friends!</p>
+            </div>
         </div>
     </Modal>
 {:else}
@@ -139,7 +141,11 @@
         font-size: 20px;
         padding: 20px;
         line-height: 30px;
-        overflow: auto;
+        overflow: scroll;
+        max-height: 500px;
+    }
+    .instructions {
+        overflow-y: scroll;
     }
 
     .modal h3 {
@@ -165,8 +171,7 @@
     }
 
     .game-details {
-        overflow-y:scroll;
-        overflow: auto;
+        overflow-y: scroll;
         max-height: 140px;
     }
 
@@ -179,5 +184,16 @@
         border: none;
         padding: 5px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    @media screen and (max-width: 500px) {
+        .modal {
+            font-size: 17px;
+            line-height: 17px;
+        }
+
+        .demo-key {
+            font-size: 15px;
+            padding: 3px;
+        }
     }
 </style>

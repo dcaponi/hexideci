@@ -18,4 +18,10 @@
         font-size: 3em;
         margin-bottom: 50px;
     }
+    @media screen and (max-width: 500px) {
+        nav {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+    }
 </style>

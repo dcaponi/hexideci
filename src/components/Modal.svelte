@@ -40,4 +40,11 @@
         transform: translate(-50%, -50%);
         background: #121214; 
     }
+
+    @media screen and (max-width: 500px) {
+        #modal {
+            width: 95%;
+        }
+    
+    }
 </style>

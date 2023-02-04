@@ -33,7 +33,7 @@
 {#each hexKeys as row, i}
     <div class="hex-row row">
         {#each row as key, j}
-            <button type="button" class="hex-key key"
+            <button type="button" class="big-key key"
             on:touchstart="{(e) => onDigitPress(e, key.value)}"
             on:mousedown="{(e) => onDigitPress(e, key.value)}"
             >{key.name}</button>
@@ -44,7 +44,7 @@
 {#each controlKeys as row, i}
     <div class="control-row row">
         {#each row as key, j}
-            <button type="button" class="control-key key" id="{key.name}"
+            <button type="button" class="big-key key" id="{key.name}"
               on:touchstart="{(e) => onControlPress(e, key.value)}"
               on:mousedown="{(e) => onControlPress(e, key.value)}"
             >{key.name}</button>
@@ -75,19 +75,30 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .hex-key {
+    .big-key {
         flex-grow: 1;
         margin: 5px;
     }
 
-    .control-key {
-        flex-grow: 1;
-        margin: 5px;
-    }
 
     .key:hover {
         color: rgb(73, 73, 104);
         background-color: rgb(202, 202, 202);
+    }
+
+    @media screen and (max-width: 500px) {
+        .key {
+            font-size: 17px;
+            line-height: 10px;
+            padding: 15px;
+        }
+        .big-key {
+            padding: 20px 10px;
+            margin: 3px;
+        }
+        .row {
+            margin-top: 10px;
+        }
     }
     
 </style>

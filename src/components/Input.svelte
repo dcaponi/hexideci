@@ -130,7 +130,7 @@
 <Keyboard on:control="{execControl}" on:digit="{execDigit}" />
  
 <style>
-       .input-label {
+    .input-label {
         display: inline-block;
         margin: auto;
         margin-top: 40px;
@@ -143,19 +143,26 @@
         text-align: right;
         margin: auto;
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        align-content: space-around;
         justify-content: flex-end;
         max-width: 250px;
     }
 
     input {
-        max-width: 50px;
-        height: 50px;
+        max-width: 40px;
+        flex-grow: 1;
+        height: 40px;
         caret-color: transparent;
         margin-top: 20px;
         font-size: 3em;
         text-align: center;
+    }
+
+    @media screen and (max-width: 500px) {
+        input {
+            font-size: 1em;
+        }
     }
 
     /*** Works on common browsers ***/
