@@ -115,16 +115,16 @@
 
 <div class="input-row">
     <p class="input-label">0x&nbsp;</p>
-    <input bind:value={values["hexiA"]} on:focus={() => inputs["hexiA"].setSelectionRange(0,1)} bind:this={inputs["hexiA"]} on:keydown={handleKeyInput} type="text" maxlength="1" id="hexiA"/>
-    <input bind:value={values["hexiB"]} on:focus={() => inputs["hexiB"].setSelectionRange(0,1)} bind:this={inputs["hexiB"]} on:keydown={handleKeyInput} type="text" maxlength="1" id="hexiB"/>
-    <input bind:value={values["hexiC"]} on:focus={() => inputs["hexiC"].setSelectionRange(0,1)} bind:this={inputs["hexiC"]} on:keydown={handleKeyInput} type="text" maxlength="1" id="hexiC"/>
+    <input bind:value={values["hexiA"]} on:focus={() => inputs["hexiA"].setSelectionRange(0,1)} bind:this={inputs["hexiA"]} on:keydown={handleKeyInput} type="text" maxlength="1" id="hexiA" inputmode="none"/>
+    <input bind:value={values["hexiB"]} on:focus={() => inputs["hexiB"].setSelectionRange(0,1)} bind:this={inputs["hexiB"]} on:keydown={handleKeyInput} type="text" maxlength="1" id="hexiB" inputmode="none"/>
+    <input bind:value={values["hexiC"]} on:focus={() => inputs["hexiC"].setSelectionRange(0,1)} bind:this={inputs["hexiC"]} on:keydown={handleKeyInput} type="text" maxlength="1" id="hexiC" inputmode="none"/>
 </div>
 
 <div class="input-row">
     <p class="input-label">0d&nbsp;</p>
-    <input bind:value={values["deciA"]} on:focus={() => inputs["deciA"].setSelectionRange(0,1)} bind:this={inputs["deciA"]} on:keydown={handleKeyInput} type="text" maxlength="1" id="deciA"/>
-    <input bind:value={values["deciB"]} on:focus={() => inputs["deciB"].setSelectionRange(0,1)} bind:this={inputs["deciB"]} on:keydown={handleKeyInput} type="text" maxlength="1" id="deciB"/>
-    <input bind:value={values["deciC"]} on:focus={() => inputs["deciC"].setSelectionRange(0,1)} bind:this={inputs["deciC"]} on:keydown={handleKeyInput} type="text" maxlength="1" id="deciC"/>
+    <input bind:value={values["deciA"]} on:focus={() => inputs["deciA"].setSelectionRange(0,1)} bind:this={inputs["deciA"]} on:keydown={handleKeyInput} type="text" maxlength="1" id="deciA" inputmode="none"/>
+    <input bind:value={values["deciB"]} on:focus={() => inputs["deciB"].setSelectionRange(0,1)} bind:this={inputs["deciB"]} on:keydown={handleKeyInput} type="text" maxlength="1" id="deciB" inputmode="none"/>
+    <input bind:value={values["deciC"]} on:focus={() => inputs["deciC"].setSelectionRange(0,1)} bind:this={inputs["deciC"]} on:keydown={handleKeyInput} type="text" maxlength="1" id="deciC" inputmode="none"/>
 </div>
 
 <Keyboard on:control="{execControl}" on:digit="{execDigit}" />
